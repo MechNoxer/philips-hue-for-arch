@@ -69,3 +69,30 @@ If you see `unauthorized user`, use `Forget Hub`, then go through the add-hub fl
 The app stores the paired bridge details in:
 
 `~/.config/hue-remote/config.json`
+
+## Arch / yay
+
+To make this installable with `yay`, publish the code to GitHub, create a `v0.1.0`
+tag, then use the files in [`packaging/`](/home/mauricedelauw/Documents/Code projects/philps hue remote/packaging)
+for your AUR package repository.
+
+Typical flow:
+
+```bash
+git tag v0.1.0
+git push origin main --tags
+```
+
+Then create a separate AUR repo named `hue-remote`, copy in:
+
+- `packaging/PKGBUILD`
+- `packaging/.SRCINFO`
+
+Users can then install it with:
+
+```bash
+yay -S hue-remote
+```
+
+If you change the GitHub repo name, update the URL in `packaging/PKGBUILD` and regenerate
+`packaging/.SRCINFO`.
