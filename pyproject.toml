@@ -1,0 +1,23 @@
+[project]
+name = "hue-remote"
+version = "0.1.0"
+description = "Desktop GUI for controlling Philips Hue lights on Linux"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "PySide6>=6.8",
+  "requests>=2.32",
+]
+
+[project.scripts]
+hue-remote = "hue_remote.main:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
