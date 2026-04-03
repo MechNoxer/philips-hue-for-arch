@@ -4,6 +4,6 @@ Type=Application
 Name=philips-hue-for-arch
 Comment=Control Philips Hue lights from your Linux desktop
 Exec=philips-hue-for-arch
-Icon=applications-system
+Icon=philips-hue-for-arch
 Terminal=false
 Categories=Utility;HomeAutomation;

@@ -3,10 +3,11 @@ from __future__ import annotations
 import math
 import sys
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any, Callable
 
 from PySide6.QtCore import QObject, QPointF, QRunnable, QRectF, Qt, QThreadPool, QTimer, Signal
-from PySide6.QtGui import QColor, QConicalGradient, QFont, QPainter, QPalette, QPen
+from PySide6.QtGui import QColor, QConicalGradient, QFont, QIcon, QPainter, QPalette, QPen
 from PySide6.QtWidgets import (
     QApplication,
     QComboBox,
@@ -190,9 +191,19 @@ class HueRemoteWindow(QMainWindow):
     HOME_PAGE = 0
     HUB_PAGE = 1
 
+    @staticmethod
+    def app_icon() -> QIcon:
+        icon_path = Path(__file__).resolve().parent / "assets" / "philips-hue-for-arch.png"
+        if icon_path.exists():
+            return QIcon(str(icon_path))
+        return QIcon()
+
     def __init__(self) -> None:
         super().__init__()
         self.setWindowTitle("philips-hue-for-arch")
+        icon = self.app_icon()
+        if not icon.isNull():
+            self.setWindowIcon(icon)
         self.resize(1120, 760)
         self.setMinimumSize(920, 640)
 
@@ -1046,6 +1057,9 @@ class HueRemoteWindow(QMainWindow):
 
 def main() -> int:
     app = QApplication(sys.argv)
+    app_icon = HueRemoteWindow.app_icon()
+    if not app_icon.isNull():
+        app.setWindowIcon(app_icon)
     window = HueRemoteWindow()
     window.show()
     return app.exec()
