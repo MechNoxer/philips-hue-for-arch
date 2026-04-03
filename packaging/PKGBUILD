@@ -3,7 +3,7 @@ pkgver=0.1.0
 pkgrel=1
 pkgdesc="Desktop GUI for controlling Philips Hue lights on Linux"
 arch=("any")
-url="https://github.com/MechNoxer/hue-remote"
+url="https://github.com/MechNoxer/philips-hue-for-arch"
 license=("MIT")
 depends=(
   "python"
@@ -16,7 +16,7 @@ makedepends=(
   "python-setuptools"
   "python-wheel"
 )
-source=("$pkgname-$pkgver.tar.gz::https://github.com/MechNoxer/hue-remote/archive/refs/tags/v$pkgver.tar.gz")
+source=("$pkgname-$pkgver.tar.gz::https://github.com/MechNoxer/philips-hue-for-arch/archive/refs/tags/v$pkgver.tar.gz")
 sha256sums=("SKIP")
 
 _srcdir_name="hue-remote-$pkgver"
