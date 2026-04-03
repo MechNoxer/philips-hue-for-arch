@@ -5,7 +5,7 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 
 
-CONFIG_DIR = Path.home() / ".config" / "hue-remote"
+CONFIG_DIR = Path.home() / ".config" / "philips-hue-for-arch"
 CONFIG_FILE = CONFIG_DIR / "config.json"
 
 

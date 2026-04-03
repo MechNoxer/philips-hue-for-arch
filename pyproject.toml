@@ -1,6 +1,6 @@
 [project]
-name = "hue-remote"
-version = "0.1.0"
+name = "philips-hue-for-arch"
+version = "0.1.1"
 description = "Desktop GUI for controlling Philips Hue lights on Linux"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -11,7 +11,7 @@ dependencies = [
 ]
 
 [project.scripts]
-hue-remote = "hue_remote.main:main"
+philips-hue-for-arch = "hue_remote.main:main"
 
 [build-system]
 requires = ["setuptools>=68"]

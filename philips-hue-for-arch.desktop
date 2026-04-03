@@ -1,9 +1,9 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Hue Remote
+Name=philips-hue-for-arch
 Comment=Control Philips Hue lights from your Linux desktop
-Exec=hue-remote
+Exec=philips-hue-for-arch
 Icon=applications-system
 Terminal=false
 Categories=Utility;HomeAutomation;

@@ -192,7 +192,7 @@ class HueRemoteWindow(QMainWindow):
 
     def __init__(self) -> None:
         super().__init__()
-        self.setWindowTitle("Hue Remote")
+        self.setWindowTitle("philips-hue-for-arch")
         self.resize(1120, 760)
         self.setMinimumSize(920, 640)
 
@@ -677,7 +677,7 @@ class HueRemoteWindow(QMainWindow):
             self.set_hub_status(message)
         else:
             self.set_status(message)
-        QMessageBox.warning(self, "Hue Remote", message)
+        QMessageBox.warning(self, "philips-hue-for-arch", message)
 
     def handle_task_error(self, message: str) -> None:
         self.set_controls_enabled(True)

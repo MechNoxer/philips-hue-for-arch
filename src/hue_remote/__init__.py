@@ -1,1 +1,1 @@
-"""Hue Remote desktop application."""
+"""philips-hue-for-arch desktop application."""

@@ -6,7 +6,7 @@ import requests
 
 
 DISCOVERY_URL = "https://discovery.meethue.com/"
-APP_NAME = "hue_remote#arch_linux"
+APP_NAME = "philips_hue_for_arch#arch_linux"
 TIMEOUT = 5
 
 

@@ -1,4 +1,4 @@
-# Hue Remote
+# philips-hue-for-arch
 
 Simple Linux desktop app for controlling Philips Hue lights with a clean GUI.
 
@@ -19,7 +19,7 @@ For `bash`/`sh`:
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -e .
-hue-remote
+philips-hue-for-arch
 ```
 
 For `fish`:
@@ -29,7 +29,7 @@ python3 -m venv .venv
 source .venv/bin/activate.fish
 python -m ensurepip --upgrade
 pip install -e .
-hue-remote
+philips-hue-for-arch
 ```
 
 Without activating the virtual environment:
@@ -38,7 +38,7 @@ Without activating the virtual environment:
 python3 -m venv .venv
 ./.venv/bin/python3 -m ensurepip --upgrade
 .venv/bin/pip install -e .
-.venv/bin/hue-remote
+.venv/bin/philips-hue-for-arch
 ```
 
 If the environment gets into a broken state, rebuild it:
@@ -49,10 +49,10 @@ python3 -m venv .venv
 source .venv/bin/activate.fish
 python -m ensurepip --upgrade
 python -m pip install -e .
-hue-remote
+philips-hue-for-arch
 ```
 
-If you want it in your app launcher, copy [`hue-remote.desktop`](/home/mauricedelauw/Documents/Code projects/philps hue remote/hue-remote.desktop) to `~/.local/share/applications/`.
+If you want it in your app launcher, copy [`philips-hue-for-arch.desktop`](/home/mauricedelauw/Documents/Code projects/philps hue remote/philips-hue-for-arch.desktop) to `~/.local/share/applications/`.
 
 ## Pairing
 
@@ -68,22 +68,22 @@ If you see `unauthorized user`, use `Forget Hub`, then go through the add-hub fl
 
 The app stores the paired bridge details in:
 
-`~/.config/hue-remote/config.json`
+`~/.config/philips-hue-for-arch/config.json`
 
 ## Arch / yay
 
-To make this installable with `yay`, publish the code to GitHub, create a `v0.1.0`
+To make this installable with `yay`, publish the code to GitHub, create a `v0.1.1`
 tag, then use the files in [`packaging/`](/home/mauricedelauw/Documents/Code projects/philps hue remote/packaging)
 for your AUR package repository.
 
 Typical flow:
 
 ```bash
-git tag v0.1.0
+git tag v0.1.1
 git push origin main --tags
 ```
 
-Then create a separate AUR repo named `hue-remote`, copy in:
+Then create a separate AUR repo named `philips-hue-for-arch`, copy in:
 
 - `packaging/PKGBUILD`
 - `packaging/.SRCINFO`
@@ -91,7 +91,7 @@ Then create a separate AUR repo named `hue-remote`, copy in:
 Users can then install it with:
 
 ```bash
-yay -S hue-remote
+yay -S philips-hue-for-arch
 ```
 
 If you change the GitHub repo name, update the URL in `packaging/PKGBUILD` and regenerate
